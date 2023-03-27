@@ -1,0 +1,23 @@
+pip install { library name }
+
+
+
+
+totals = 5, each subject mark is considered as 100, total = 500
+
+
+std=1 ( student name )
+-----------------------------
+math = 60
+social = 40
+alt = 30
+science = 50
+hindi = 70
+
+---------------------------------------------------------
+
+math + social + alt + science + hindi  = some ans.
+
+total_marks
+-----------------x 100 %
+500
