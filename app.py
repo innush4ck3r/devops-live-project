@@ -31,19 +31,21 @@ def calculate_percentage():
 
     print("Percentage", rounded_percentage)
 
+    # json
+    data = {
+        "student_name": student_name,
+        "maths_marks": maths_marks,
+        "science_marks":science_marks,
+        "social_science_marks": social_science_marks,
+        "language": language,
+        "alternative_marks": alternative_marks,
+        "total_marks": total_marks,
+        "percentage" : rounded_percentage
+    }
 
-    # data = {
-    #     "student_name": student_name,
-    #     "maths_marks": maths_marks,
-    #     "science_marks":science_marks,
-    #     "social_science_marks": social_science_marks,
-    #     "language": language,
-    #     "alternative_marks": alternative_marks
-    # }
 
-
-    # file = open('data.json', 'a')
-    # file.write()
+    file = open('data.json', 'a')
+    file.write(str(data))
 
     return render_template('result.html', data={ "name": student_name, "percentage": rounded_percentage, "total_marks": total_marks })
 
