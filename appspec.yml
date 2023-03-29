@@ -1,0 +1,28 @@
+version: 0.0
+os: linux
+
+files:
+- source: /
+   destination: /opt/iam_app/testapp
+
+hooks:
+
+  BeforeInstall:
+   - location: ./scripts/before-install.sh
+     timeout: 900
+     runas: ubuntu
+
+  ApplicationStart:
+  - location: scripts/start-application.sh
+    runas: ubuntu
+    timeout: 900
+
+  ApplicationStop:
+  - location: scripts/stop-application.sh
+    runas: ubuntu
+    timeout: 900
+
+  AfterInstall:
+  - location: ./scripts/after-install.sh
+    runas: ubuntu
+    timeout: 900
