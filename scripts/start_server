@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo service devops-app start
+sudo systemctl start iam_webapp
